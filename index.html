@@ -3,10 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1"><!--移动设备优先-->
+	<title>works</title>
 	<link rel="stylesheet" href="bootstrap.css">
 <style>
-	nav{
-		margin-bottom:5px;
+	main{
+		margin-top:55px;
+	}
+	#accordion{
+		margin-top:5px;
+	}
+	.activenav{
+		color:red;
+		background:blue;
+	}
+	.panel-body img{
+		margin-top:5px;
 	}
 </style>
 </head>
@@ -14,10 +25,15 @@
 <script src="bootstrap.js"></script>
 
 <script>
-$(function(){
-	//$('span').on('closed.bs.alert');
-	//alert(1);
-});
+	$(function(){
+		$("#navbar").find("a").click(function(){//触发h4标签下a标签的点击
+			//alert($(this).index("a"));
+			var $showIndex=$(this).index("a");
+			var $contentTitle=$("h4 a");
+			$contentTitle.eq($showIndex-1).trigger("click");
+		});
+		
+	});
 </script>
 <body>
 	<!--nav开始-->
@@ -30,21 +46,19 @@ $(function(){
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="#">A迸</a>
+			  <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-send" style="color:white">&nbsp;wangabeng</span></a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#contentH01">Design</a></li>
+				<li><a href="#contentH02">Experience</a></li>
+				<li><a href="#contentH03">Contact</a></li>
 			  </ul>
 			</div><!--/.nav-collapse -->
 		  </div>
 		</nav>
 	<!--nav结束-->
-	<br>
-	<br>
-	<br>
+	
 	<!--轮播图开始-->
 	<main role="main">
 		<div id="homepage-feature" class="carousel slide">
@@ -58,16 +72,16 @@ $(function(){
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="emancipation.jpg" alt="OKWU.edu Homepage">
+					<img src="reddot900500.jpg" alt="OKWU.edu Homepage">
 				</div>
 				<div class="item">
-					<img src="emancipation.jpg" alt="OKWU Athletics Homepage">
+					<img src="facuet2-900500.jpg" alt="OKWU Athletics Homepage">
 				</div>
 				<div class="item">
-					<img src="emancipation.jpg" alt="Bartlesville Community Foundation">
+					<img src="bardesk900500.jpg" alt="Bartlesville Community Foundation">
 				</div>
 				<div class="item">
-					<img src="emancipation.jpg" alt="Emancipation Stories">
+					<img src="printer900500.jpg" alt="Emancipation Stories">
 				</div>
 			</div><!-- /.carousel-inner -->
 
@@ -82,5 +96,76 @@ $(function(){
 	</main>
 	<!--轮播图结束-->
 
+	<!--内容展开收缩区开始-->
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingOne">
+		  <h4 class="panel-title" id="contentH01">
+			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			  Design&nbsp;&nbsp;<span class="glyphicon glyphicon-hand-down"></span>
+			</a>
+		  </h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in contentPart" role="tabpanel" aria-labelledby="headingOne">
+		  <div class="panel-body">
+			<img src="002.jpg" class="img-responsive center-block">
+			<img src="001.jpg" class="img-responsive center-block">
+			<img src="003.jpg" class="img-responsive center-block">
+			<img src="004.jpg" class="img-responsive center-block">
+			<img src="005.jpg" class="img-responsive center-block">
+			<img src="006.jpg" class="img-responsive center-block">
+			<img src="007.jpg" class="img-responsive center-block">
+			<img src="008.jpg" class="img-responsive center-block">
+			<img src="009.jpg" class="img-responsive center-block">
+			<img src="010.jpg" class="img-responsive center-block">
+			<img src="011.jpg" class="img-responsive center-block">
+			<img src="012.jpg" class="img-responsive center-block">
+			<img src="013.jpg" class="img-responsive center-block">
+			<img src="014.jpg" class="img-responsive center-block">
+			<img src="015.jpg" class="img-responsive center-block">
+		  </div>
+		</div>
+	  </div>
+	  <div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingTwo">
+		  <h4 class="panel-title"  id="contentH02">
+			<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			  Experience&nbsp;&nbsp;<span class="glyphicon glyphicon-hand-down"></span>
+			</a>
+		  </h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse contentPart" role="tabpanel" aria-labelledby="headingTwo">
+		  <div class="panel-body">
+			<p>2005年毕业于武汉轻工大学工业设计专业。先后服务于海鸥卫浴、康立科技、中世纵横等上市公司或专业工业设计机构。领域广泛的设计实践及项目管理，参与设计的产品领域包括五金卫浴洁具、医疗仪器、小家电、数码产品、创意礼品等。国家工业设计师（二级/技师）资质；具备设计团队管理及大型上市公司设计及项目管理经验，有大型上市工厂及专业设计机构工作经验；懂一般部件结构设计及工程图标准，熟悉常见材料工艺及模具有关知识；参与多个项目的生产工艺及作业指导书的改善；可熟练手写HTML、CSS、Javascript、jQuery程序代码，实现web前端开发；较强的团队协作意识，稳重踏实，乐于共享、开放交流。<p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingThree">
+		  <h4 class="panel-title"  id="contentH03">
+			<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			  Contact&nbsp;&nbsp;<span class="glyphicon glyphicon-hand-down"></span>
+			</a>
+		  </h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse contentPart" role="tabpanel" aria-labelledby="headingThree">
+		  <div class="panel-body">
+			<p>联系电话：15057926728</p>
+			<p>E-mail：wangabeng@163.com</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!--内容展开收缩区结束-->
+
+	<!--footer开始-->
+   <section class="footer-section">
+	 <div class="container">
+		<footer class="foot clearfix text-center">
+		   <p>Copyright &copy;2017 wangabeng. All Rights Reserved.</p>
+		</footer>
+	 </div>
+  </section>
+  <!--footer结束-->
 </body>
 </html>
